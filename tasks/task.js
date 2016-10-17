@@ -10,6 +10,7 @@ function Task(name, dueDate, priority, status, percentComplete) {
 }
 
 Task.prototype.format = function() {
+	
 
 };
 

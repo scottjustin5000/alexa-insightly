@@ -4,7 +4,30 @@ var _ = require('lodash');
 
 describe('Test Leads Intent', function() {
 	
-//test various permutations of format
+	it('should fully format lead response', function(done){
+		var lead = new Lead('scott', 'justin', '5000', '415555555', 'some-one@fake.com');
+		lead.DATE_CREATED = new Date();
+		var formatted = lead.DATE_CREATED.toLocaleDateString('en-US')
+		var val = lead.format();
+		val.should.equal('scott justin<break time="500ms"/> from 5000<break time="500ms"/> phone number 4 1 5 5 5 5 5 5 5<break time="500ms"/> with email address some dash one at fake dot com<break time="500ms"/> created on '+formatted);
+		done();
+	});
+
+	it('should patially format lead response', function(done){
+		
+		var lead = new Lead(undefined, 'justin', undefined, undefined,'some-one@fake.com');
+		var val = lead.format();
+		val.should.equal(' justin<break time="500ms"/> with email address some dash one at fake dot com');
+		done();
+	});
+
+	it('should minimally format lead response', function(done){
+		
+		var lead = new Lead('scott');
+		var val = lead.format();
+		val.should.equal('scott ');
+		done();
+	});
 
 });
 
@@ -19,8 +42,7 @@ describe('Leads intent integration test', function() {
 	});
 
 	it('should create new lead', function(done){
-		return intent.create('scott','justin','5000','4155555555', 'foo@insight.ly').then(function(res) {
-			//console.log(res)
+		return intent.create('scott','justin','5000','4155555555', 'foo@insight.ly').then(function(res) {ß
 			res.should.be.an.instanceOf(Object);
 			res.should.have.property('type', 'Leads');
 			res.should.have.property('responseData');

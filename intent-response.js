@@ -18,7 +18,7 @@ IntentResponse.prototype.format = function(){
 	var formattedObjectResponses = _.map(this.responseData, function(data) {
 		return data.format();
 	});
-	var fullResponse += formattedObjectResponses.join('<break time="1s"/>');
+	var fullResponse = formattedObjectResponses.join('<break time="1s"/>');
 	return 'Here are the result for your '+this.type+'. <break time="500ms"/> ' + fullResponse;
 };
 

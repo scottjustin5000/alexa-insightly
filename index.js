@@ -14,7 +14,7 @@ app.launch(function(req, res) {
 
 function parseEmail(email) {
 	var address = new EmailAddress(email);
-	return value;
+	return address.convertFromSpeech();
 }
 
 
