@@ -1,0 +1,35 @@
+{
+  "name": "alexa-insightly",
+  "version": "0.0.1",
+  "description": "alexa stat skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test",
+    "package": "node-lambda package --configFile ./deploy.env"
+  },
+  "author": "sf",
+  "license": "ISC",
+  "engines": {
+    "node": "0.12.7",
+    "npm": "2.11.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottjustin5000/alexa-insightly"
+  },
+  "dependencies": {
+    "alexa-app": "^2.3.2",
+    "alexa-app-server": "^2.2.4",
+    "bluebird": "^2.9.34",
+    "dotenv": "^1.2.0",
+    "lodash": "^4.11.2",
+    "moment": "^2.15.1",
+    "node-lambda": "0.8.10",
+    "request-promise": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2",
+    "dotenv": "2.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+These are details. They can be anything
+this is a lot of text that people can be
+entering concerning oportunitities and projects
+and whatever else they see fit.  Amazon dot 
+literal has been deprecated so we can no longer use
+it.  Previously we'd use that to capture text that 
+can, literally, be anything.
