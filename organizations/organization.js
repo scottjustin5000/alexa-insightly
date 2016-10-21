@@ -1,12 +1,13 @@
-function Organization(name, contactInfos) {
+function Organization(name, contactInfos, id) {
 	
 	if(!name) {
-		throw new Error("Inavlid Organization: a valid name is required");
+		throw new Error("Invalid Organization: a valid name is required");
 	}
 
 	var self = this;
-	self.name = name;
+	self.ORGANISATION_NAME = name;
 	self.CONTACTINFOS = contactInfos;
+	self.ID = id;
 	return self;
 }
 

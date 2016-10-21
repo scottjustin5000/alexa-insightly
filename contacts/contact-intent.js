@@ -66,12 +66,13 @@ function ContactIntent() {
 
 	self.delete = function(id) {
 
-		return api.delete('contacts', id);
+		return api.delete(ObjectType.CONTACTS, id);
 	};
 
 	return self;
 
-
 }
 
 ContactIntent.prototype = Object.create(BaseIntent.prototype);
+
+module.exports = ContactIntent;

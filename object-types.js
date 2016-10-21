@@ -1,6 +1,6 @@
 module.exports ={
 	CONTACTS:'Contacts',
-	ORGANIZATIONS: 'Organizations',
+	ORGANIZATIONS: 'Organisations',
 	LEADS:'Leads',
 	EVENTS: 'Events',
 	OPPORTUNITIES:'Opportunities',
