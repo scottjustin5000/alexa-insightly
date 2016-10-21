@@ -1,6 +1,8 @@
 var Opportunity = require('./opportunity');
 var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
+var ObjectType = require('../object-types');
+var FilterData = reqiore('../filter-data');
 var api = require('../insightly-api');
 
 var _ = require('lodash');
@@ -23,7 +25,7 @@ function OpportunityIntent() {
 	function mapCreateResponse(response) {
 		
 		var opp = mapOpportunity(response);
-		return new IntentResponse('Opportunities', [opp]);
+		return new IntentResponse(ObjectType.OPPORTUNITIES, [opp]);
 	}
 
 	function mapResponse(response) {
@@ -32,19 +34,19 @@ function OpportunityIntent() {
 		var dataResults = _.map(responseData, function(l) {
 			return mapOpportunity(l);
 		});
-		return new IntentResponse('Opportunities', dataResults);
+		return new IntentResponse(ObjectType.OPPORTUNITIES, dataResults);
 	}
 
 	function getForSpan(span) {
 
-		return api.getForSpan('opportunities', span)
+		return api.getForSpan(ObjectType.OPPORTUNITIES, span, 'DATE_CREATED_UTC')
 			.then(mapResponse)
 			.catch(this.handleError);
 	}
 
 	function find (oppname) {
-
-		return api.filteredGet('opportunities', oppname, 'OPPORTUNITY_NAME')
+		var filter = new FilterData('OPPORTUNITY_NAME', 'eq', oppname)
+		return api.filteredGet(ObjectType.OPPORTUNITIES, [filter])
 			.then(mapResponse)
 			.catch(this.handleError);
 	}
@@ -52,7 +54,7 @@ function OpportunityIntent() {
 	self.create = function(name, description) {
 
 		var opp = new Opportunity(name, description);
-		return api.post('opportunities', opp)
+		return api.post(ObjectType.OPPORTUNITIES, opp)
 			.then(mapCreateResponse)
 			.catch(this.handleError);
 	};
@@ -63,7 +65,7 @@ function OpportunityIntent() {
 
 	self.delete = function(id) {
 
-		return api.delete('opportunities', id);
+		return api.delete(ObjectType.OPPORTUNITIES, id);
 	};
 
 	return self;

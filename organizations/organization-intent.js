@@ -1,3 +1,6 @@
+var ObjectType = require('../object-types');
+var FilterData = reqiore('../filter-data');
+
 function OrganizationIntent() {
 
 

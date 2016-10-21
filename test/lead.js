@@ -5,6 +5,7 @@ var _ = require('lodash');
 describe('Test Leads Intent', function() {
 	
 	it('should fully format lead response', function(done){
+		
 		var lead = new Lead('scott', 'justin', '5000', '415555555', 'some-one@fake.com');
 		lead.DATE_CREATED = new Date();
 		var formatted = lead.DATE_CREATED.toLocaleDateString('en-US')
@@ -42,7 +43,8 @@ describe('Leads intent integration test', function() {
 	});
 
 	it('should create new lead', function(done){
-		return intent.create('scott','justin','5000','4155555555', 'foo@insight.ly').then(function(res) {ß
+		return intent.create('scott','justin','5000','4155555555', 'foo@insight.ly')
+		.then(function(res) {
 			res.should.be.an.instanceOf(Object);
 			res.should.have.property('type', 'Leads');
 			res.should.have.property('responseData');
@@ -63,7 +65,7 @@ describe('Leads intent integration test', function() {
 			res.responseData.should.be.an.instanceOf(Array);
 			var results = res.responseData;
 			var found = _.first(results, function(r){
-				return r.ID = lead.ID;
+				return r.ID === lead.ID;
 			});
 			done();
 		});

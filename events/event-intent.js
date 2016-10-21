@@ -1,42 +1,68 @@
+var BaseIntent = require('../base-intent');
 var Event = require('./event');
 var IntentResponse = require('./intent-response');
+var SpanTypes = require('../span-types');
+var ObjectType = require('../object-types');
+
 var api = require('../insightly-api');
 
 function EventIntent() {
 
+	BaseIntent.call(this);
+	var self = this;
+
+	function mapEvent(response) {
+		
+		var event = new Event(response.TITLE, response.START_DATE_UTC, response.END_DATE_UTC, response.ALL_DAY, response.DETAILS, response.EVENT_ID);
+		return event;
+	}
+	
+	function mapCreateResponse(response) {
+		
+		var event = mapEvent(response);
+		return new IntentResponse(ObjectType.EVENTS, [event]);
+	}
 
 	function mapResponse(response) {
+		
+		var dataResults = _.map(response.body, function(e) {
+			return mapEvent(e);
+		});
+		return new IntentResponse(ObjectType.EVENTS, dataResults);
+	}
 
-		if(response.statusCode !== 200){
-			return handleError(response.statusCode);
+	function getStartTime(date, time) {
+		
+		if(!date && !time) {
+			return;
+		}
+		var eventDate = date ? moment(date).format('YYYY-MM-DD') : new Date();
+
+		if(time) {
+			return moment(eventDate + ' ' + time, 'YYYY-MM-DD HH:mm').utc();
+		} else if(date && !time) {
+			return moment(eventDate + ' 12:OO', 'YYYY-MM-DD HH:mm');
 		} 
-
-		var body = response.body;
-		//map responses to array
-
-
-		return Promise.resolve();
-
-
 	}
 
-	function create() {
-		var event = new Event();
-		return api.post('events', event)
+	self.create = function(title, firstName, lastName date, time) {
+		var eventTitle = (title ||'') + ' ' +(firstName || '')+ ' '+(lastName || ' ');
+		var eventDate = getStartTime(date, time);
+		
+		var event = new Event(eventTitle, eventDate);
+		return api.post(ObjectType.EVENTS, event)
+		.then(mapCreateResponse)
+		.catch(handleError);
+	}
+
+	self.get = function(span) {
+		return api.getBySpan(ObjectType.EVENTS, span, 'START_DATE_UTC')
 		.then(mapResponse)
 		.catch(handleError);
 	}
 
-	function get(span) {
-		return api.getBySpan('events', event)
-		.then(mapResponse)
-		.catch(handleError);
-	}
-
-	return {
-		create: create,
-		get: get
-	}
 }
 
 module.exports = EventIntent;
+
+EventIntent.prototype = Object.create(BaseIntent.prototype);

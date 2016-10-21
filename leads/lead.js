@@ -3,7 +3,7 @@ var EmailAddress = require('../email-address');
 function Lead(firstName, lastName, company, phoneNumber, email, id) {
 	
 	if(!firstName && !lastName) {
-		throw new Error("Inavlid Lead: a valid contact name is required");
+		throw new Error("Invalid Lead: a name is required");
 	}
 	var self = this;
 	//this format is req for Insightly API
@@ -13,6 +13,7 @@ function Lead(firstName, lastName, company, phoneNumber, email, id) {
 	self.PHONE_NUMBER = phoneNumber;
 	self.EMAIL_ADDRESS = email;
 	self.ID = id;
+	self.CONVERTED;
 	self.DATE_CREATED;
 	return self;
 }

@@ -87,7 +87,7 @@ app.intent('list_lead_intent', {
 }, function(req, res) {
 
 	var intent = new LeadsIntent();
-	intent.getForSpan(timeFrame).then(function(response) {
+	intent.get(timeFrame).then(function(response) {
 		res.say(response.format()).send();
 	});
 
@@ -157,6 +157,65 @@ app.intent('create_lead_intent', {
 
 });
 
+app.intent('list_task_intent', {
+	"slots": [{
+		"name": "TIMEFRAME",
+		"type": "TIMESPANS"
+	}],
+	"utterances": [
+		"Tell me my tasks",
+		"Tell me my tasks for {-|TIMEFRAME}",
+		"Get my tasks for {-|TIMEFRAME}",
+		"{List|Get} {-|TIMEFRAME} tasks"
+	]
+}, function(req, res) {
+
+	var timeFrame = req.slot('TIMEFRAME');
+
+	if (!timeFrame) {
+		res.reprompt("Sorry, I didn't hear what you wanted to find.").shouldEndSession(false).send();
+		return true;
+	}
+
+	var intent = new TaskIntent();
+	intent.get(timeFrame).then(function(response) {
+		res.say(response.format()).send();
+	});
+
+});
+
+app.intent('create_task_intent', {
+	"slots": [{
+		"name": "DATE",
+		"type": "AMAZON.DATE"
+	}, {
+		"name": "NAME",
+		"type": "LITERAL_NAMES"
+	}, {
+		"name": "PRIORITY",
+		"type": "PRIORITIES"
+	}],
+	"utterances": [
+		"{Create|Set|Add} a new task {-NAME} due {-|DATE} {with|has} {-|PRIORITY} PRIORITY",
+		"{Create|Set|Add} a new task {-NAME} due {-|DATE}",
+		"{Create|Set|Add} a new task {-NAME}",
+		"{Create|Set|Add} a new {-|PRIORITY} priority task {-NAME} due {-|DATE}",
+		"{Create|Set|Add} a new {-|PRIORITY} priority task {-NAME}"
+	]
+}, function(req, res) {
+	
+	var name = req.slot('NAME');
+	var dueDate = req.slot('DATE');
+	var priority = req.slot('PRIORITY');
+
+	var intent = new TaskIntent();
+
+	intent.create(name, dueDate, priority).then(function(response) {
+		res.say(response.format()).send();
+	});
+
+});
+
 app.intent('list_event_intent', {
 	"slots": [{
 		"name": "TIMEFRAME",
@@ -166,7 +225,7 @@ app.intent('list_event_intent', {
 		"Tell me my {schedule|events|appointments|meetings}",
 		"Tell me my {schedule|events|appointments|meetings} for {-|TIMEFRAME}",
 		"Get my {schedule|events|appointments|meetings} for {-|TIMEFRAME}",
-		"List {-|TIMEFRAME} {schedule|events|appointments|meetings}"
+		"{List|Get} {-|TIMEFRAME} {schedule|events|appointments|meetings}"
 	]
 }, function(req, res) {
 
@@ -222,7 +281,7 @@ app.intent('create_event_intent', {
 		"{Create|Set} a meeting {for|with} {-FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}"
 	]
 }, function(req, res) {
-
+	
 
 });
 
@@ -238,11 +297,18 @@ app.intent('list_opportunity_intent', {
 		"Tell me my opportunities",
 		"Tell me my opportunities for {-|TIMEFRAME}",
 		"Get my opportunities for {-|TIMEFRAME}",
-		"List {-|TIMEFRAME} opportunities",
+		"{List|Get} {-|TIMEFRAME} opportunities",
 		"{Find|Search} for opportunity {-|OPPORTUNITY_NAME}"
 	]
 }, function(req, res) {
 	var timeframe = req.slot('TIMEFRAME');
+	var oppName = req.slot('OPPORTUNITY_NAME');
+
+	var opprtunityIntent = new OpportunityIntent();
+
+	opprtunityIntent.get(timeframe, oppName).then(function(result) {
+
+	});
 
 });
 
@@ -276,13 +342,13 @@ app.intent('list_project_intent', {
 		"Tell me my projects due this {-|TIMEFRAME}",
 		"Tell me my projects due today",
 		"Tell me my projects for {-|TIMEFRAME}",
-		"Get my projects for {-|TIMEFRAME}",
-		"List {-|TIMEFRAME} projects}",
+		"{Get|List} my projects for {-|TIMEFRAME}",
+		"{List|Get} {-|TIMEFRAME} projects}",
 		"{Find|Search|Get} for project {-|PROJECT_NAME}"
 	]
 }, function(req, res) {
 	var timeframe = req.slot('TIMEFRAME');
-
+	var projectName = req.slot('PROJECT_NAME');
 
 });
 
@@ -320,10 +386,7 @@ app.intent('search_contact_intent', {
 	"utterances": [
 		"{Find|Search} contact {-|FIRST_NAME} {-|LAST_NAME}",
 		"{Find|Search} contact information for {-|FIRST_NAME} {-|LAST_NAME}",
-		"{Find|Search} contact for {-|FIRST_NAME} {-|LAST_NAME}",
-		"{Find|Search} contact {-|ORGANIZATION_NAME}",
-		"{Find|Search} contact information for {-|ORGANIZATION_NAME}",
-		"{Find|Search} contact for {-|ORGANIZATION_NAME}"
+		"{Find|Search} contact for {-|FIRST_NAME} {-|LAST_NAME}"
 	]
 }, function(req, res) {
 	var timeframe = req.slot('TIMEFRAME');
@@ -343,23 +406,14 @@ app.intent('create_contact_intent', {
 	}, {
 		"name": "EMAIL",
 		"type": "EMAILS"
-	}, {
-		"name": "ORGANIZATION_NAME",
-		"type": "LITERAL_NAMES"
 	}],
 	"utterances": [
 		"Create a new contact for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} at {EMAIL}",
 		"Create a new contact for {LAST_NAME} at {PHONE_NUMBER} at {EMAIL}",
 		"Create a new contact for {FIRST_NAME} at {PHONE_NUMBER} at {EMAIL}",
-		"Create a new contact for {ORGANIZATION_NAME} at {PHONE_NUMBER} at {EMAIL}",
-		"Create a new contact for {ORGANIZATION_NAME} at {PHONE_NUMBER}",
-		"Create a new contact for {ORGANIZATION_NAME} at {EMAIL}",
 		"Create a new contact for {FIRST_NAME} {LAST_NAME} {with|at} phone number {PHONE_NUMBER} {with|at} email {EMAIL}",
 		"Create a new contact for {LAST_NAME} {with|at} phone number {PHONE_NUMBER} {with|at} email {EMAIL}",
-		"Create a new contact for {FIRST_NAME} {with|at} phone number {PHONE_NUMBER} {with|at} email {EMAIL}",
-		"Create a new contact for {ORGANIZATION_NAME} {with|at} phone number {PHONE_NUMBER} {with|at} email {EMAIL}",
-		"Create a new contact for {ORGANIZATION_NAME} {with|at} phone number {PHONE_NUMBER}",
-		"Create a new contact for {ORGANIZATION_NAME} {with|at} email {EMAIL}"
+		"Create a new contact for {FIRST_NAME} {with|at} phone number {PHONE_NUMBER} {with|at} email {EMAIL}"
 	]
 }, function(req, res) {
 
@@ -369,17 +423,13 @@ app.intent('create_contact_intent', {
 
 app.intent('search_organization_intent', {
 	"slots": [{
-		"name": "PHONE_NUMBER",
-		"type": "AMAZON.NUMBER"
-	}, {
 		"name": "ORGANIZATION_NAME",
 		"type": "LITERAL_NAMES"
 	}],
 	"utterances": [
-		"Tell me my {schedule|events|appointments}",
-		"Tell me my {schedule|events|appointments} for {-|TIMEFRAME}",
-		"Get my {schedule|events|appointments} for {-|TIMEFRAME}",
-		"List {-|TIMEFRAME} {schedule|events|appointments}"
+		"{Find|Search} organization {-|ORGANIZATION_NAME}",
+		"{Find|Search} organization information for {-|ORGANIZATION_NAME}",
+		"{Find|Search} organization for {-|ORGANIZATION_NAME}"
 	]
 }, function(req, res) {
 	var timeframe = req.slot('TIMEFRAME');

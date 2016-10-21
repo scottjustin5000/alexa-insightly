@@ -1,14 +1,11 @@
 var rp = require('request-promise');
 var moment = require('moment');
-var rp = require('request-promise');
 var _ = require('lodash');
 
 var SpanTypes = require('./span-types');
-
+var FilterData = require('./filter-data');
 var API = process.env.INSIGHTLY_URL;
 var TOKEN = process.env.INSIGHTLY_TOKEN;
-
-var spanFields = {'contacts':'DATE_CREATED_UTC', 'organizations': 'DATE_CREATED_UTC', 'tasks':'DUE_DATE', 'projects': 'DUE_DATE', 'opportunities':'', 'leads':'DATE_CREATED_UTC'};
 
 //broken out so we can run tests for getCurrentWeekString
 function getStart(type) {
@@ -19,7 +16,7 @@ function getEnd(type) {
 	return moment().endOf(type).utc().format();
 }
 
-function getSpanString(type, span) {
+function getSpanString(type, span, field) {
 
 	if(!span || span === SpanTypes.UNKNOWN) {
 		throw new Error('Unknown Span');
@@ -28,8 +25,8 @@ function getSpanString(type, span) {
 	var start = getStart(span);
 	var end = getEnd(span);
 
-	var queryString = _.template('$filter=DATE_CREATED_UTC%20gt%20DateTime\'${start_date}\'and%20DATE_CREATED_UTC%20lt%20DateTime\'${end_date}\'')({
-		field: spanFields[type] || 'DATE_CREATED_UTC',
+	var queryString = _.template('${field}%20gt%20DateTime\'${start_date}\'and%20${field}%20lt%20DateTime\'${end_date}\'')({
+		field: field || 'DATE_CREATED_UTC',
 		start_date: start,
 		end_date: end
 	});
@@ -37,10 +34,19 @@ function getSpanString(type, span) {
 	return queryString;
 }
 
-function getForSpan(route, span) {
+function getFilteredString(filteredData) {
+
+	var filter = _.map(filteredData, function(filter) {
+		return filter.field+"%20"+filter.operator+"%20'"+filter.value+"'";
+	});
+	return filter.join('and%20');
+
+}
+//needs to be updated to work like filtered string
+function getForSpan(route, span, field) {
 	var options = {
 		method: 'GET',
-		uri: API + route + "?brief=true&" + getSpanString(route, span),
+		uri: API + route + '?brief=true&$filter=' + getSpanString(route, span, field),
 		resolveWithFullResponse: true,
 		json: true,
 		headers: {
@@ -55,7 +61,7 @@ function getForSpan(route, span) {
 function get(route) {
 	var options = {
 		method: 'GET',
-		uri: API + route + "?brief=true",
+		uri: API + route + '?brief=true',
 		resolveWithFullResponse: true,
 		json: true,
 		headers: {
@@ -70,7 +76,7 @@ function get(route) {
 function filteredGet(route, term, field) {
 	var options = {
 		method: 'GET',
-		uri: API + route + "?brief=true",
+		uri: API + route + "?brief=true&$filter="+field+"%20eq%20'"+term+"'",
 		resolveWithFullResponse: true,
 		json: true,
 		headers: {
