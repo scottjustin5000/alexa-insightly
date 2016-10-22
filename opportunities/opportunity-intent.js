@@ -2,7 +2,7 @@ var Opportunity = require('./opportunity');
 var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
 var ObjectType = require('../object-types');
-var FilterData = reqiore('../filter-data');
+var FilterData = require('../filter-data');
 var api = require('../insightly-api');
 
 var _ = require('lodash');
@@ -12,7 +12,7 @@ function OpportunityIntent() {
 	var self = this;
 
 	function mapOpportunity(result) {
-		var opportunity = new Opportunity(result.OPPORTUNITY_NAME, result.OPPORTUNITY_DETAILS);
+		var opportunity = new Opportunity(result.OPPORTUNITY_NAME, result.OPPORTUNITY_DETAILS, result.OPPORTUNITY_ID);
 		opportunity.PROBABILITY;
 		opportunity.OPPORTUNITY_STATE;
 		opportunity.FORECAST_CLOSE_DATE;
@@ -44,7 +44,8 @@ function OpportunityIntent() {
 			.catch(this.handleError);
 	}
 
-	function find (oppname) {
+	function getFiltered(oppname) {
+
 		var filter = new FilterData('OPPORTUNITY_NAME', 'eq', oppname)
 		return api.filteredGet(ObjectType.OPPORTUNITIES, [filter])
 			.then(mapResponse)
@@ -59,8 +60,9 @@ function OpportunityIntent() {
 			.catch(this.handleError);
 	};
 
-	self.get = function(opportunityName, span) {
-		return opportunityName ? search(opportunityName) : get(span);
+	self.get = function(span, opportunityName) {
+
+		return opportunityName ? getFiltered(opportunityName) : getForSpan(span);
 	};
 
 	self.delete = function(id) {

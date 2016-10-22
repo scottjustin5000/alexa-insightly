@@ -1,0 +1,425 @@
+help_intent	help
+list_lead_intent	Tell me my leads
+list_lead_intent	Tell me my leads for {TIMEFRAME}
+list_lead_intent	Get my leads for {TIMEFRAME}
+list_lead_intent	List {TIMEFRAME} leads
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} at {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} at {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} at {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} at {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} at email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} at email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} at email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} at email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} from {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} of {COMPANY_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} from {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} of {COMPANY_NAME} at {PHONE_NUMBER} with email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} from {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add new lead for {FIRST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create a lead for {FIRST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Add a lead for {FIRST_NAME} of {COMPANY_NAME} at {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} from {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} from {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} from {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} from {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Create new lead for {LAST_NAME} of {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Add new lead for {LAST_NAME} of {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Create a lead for {LAST_NAME} of {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Add a lead for {LAST_NAME} of {COMPANY_NAME} at email {EMAIL}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} at {PHONE_NUMBER} with email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} {LAST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} at {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} at {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {FIRST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {FIRST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {FIRST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {FIRST_NAME} at {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} at email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} at email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} at email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} at email {EMAIL} from {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} at email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} at email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} at email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} at email {EMAIL} of {COMPANY_NAME}
+create_lead_intent	Create new lead for {LAST_NAME} at email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add new lead for {LAST_NAME} at email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Create a lead for {LAST_NAME} at email {EMAIL} at {COMPANY_NAME}
+create_lead_intent	Add a lead for {LAST_NAME} at email {EMAIL} at {COMPANY_NAME}
+list_task_intent	Tell me my tasks
+list_task_intent	Tell me my tasks for {TIMEFRAME}
+list_task_intent	Get my tasks for {TIMEFRAME}
+list_task_intent	List {TIMEFRAME} tasks
+list_task_intent	Get {TIMEFRAME} tasks
+create_task_intent	Create a new task {NAME} due {DATE} with {PRIORITY} priority
+create_task_intent	Set a new task {NAME} due {DATE} with {PRIORITY} priority
+create_task_intent	Add a new task {NAME} due {DATE} with {PRIORITY} priority
+create_task_intent	Create a new task {NAME} due {DATE} has {PRIORITY} priority
+create_task_intent	Set a new task {NAME} due {DATE} has {PRIORITY} priority
+create_task_intent	Add a new task {NAME} due {DATE} has {PRIORITY} priority
+create_task_intent	Create a new task {NAME} due {DATE}
+create_task_intent	Set a new task {NAME} due {DATE}
+create_task_intent	Add a new task {NAME} due {DATE}
+create_task_intent	Create a new task {NAME}
+create_task_intent	Set a new task {NAME}
+create_task_intent	Add a new task {NAME}
+create_task_intent	Create a new {PRIORITY} priority task {NAME} due {DATE}
+create_task_intent	Set a new {PRIORITY} priority task {NAME} due {DATE}
+create_task_intent	Add a new {PRIORITY} priority task {NAME} due {DATE}
+create_task_intent	Create a new {PRIORITY} priority task {NAME}
+create_task_intent	Set a new {PRIORITY} priority task {NAME}
+create_task_intent	Add a new {PRIORITY} priority task {NAME}
+list_event_intent	Tell me my schedule
+list_event_intent	Tell me my events
+list_event_intent	Tell me my appointments
+list_event_intent	Tell me my meetings
+list_event_intent	Tell me my schedule for {TIMEFRAME}
+list_event_intent	Tell me my events for {TIMEFRAME}
+list_event_intent	Tell me my appointments for {TIMEFRAME}
+list_event_intent	Tell me my meetings for {TIMEFRAME}
+list_event_intent	Get my schedule for {TIMEFRAME}
+list_event_intent	Get my events for {TIMEFRAME}
+list_event_intent	Get my appointments for {TIMEFRAME}
+list_event_intent	Get my meetings for {TIMEFRAME}
+list_event_intent	List {TIMEFRAME} schedule
+list_event_intent	Get {TIMEFRAME} schedule
+list_event_intent	List {TIMEFRAME} events
+list_event_intent	Get {TIMEFRAME} events
+list_event_intent	List {TIMEFRAME} appointments
+list_event_intent	Get {TIMEFRAME} appointments
+list_event_intent	List {TIMEFRAME} meetings
+list_event_intent	Get {TIMEFRAME} meetings
+create_event_intent	Create a new calendar event titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new calendar event titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event for {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new calendar event for {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event with {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new calendar event with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new event titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new event titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new event for {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new event for {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new event with {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new event with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create an appointment titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Set an appointment titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create an appointment for {TITLE} for {DATE} at {TIME}
+create_event_intent	Set an appointment for {TITLE} for {DATE} at {TIME}
+create_event_intent	Create an appointment with {TITLE} for {DATE} at {TIME}
+create_event_intent	Set an appointment with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new meeting for {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new meeting for {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a new meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a meeting for {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a meeting for {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Set a meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a new calendar event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a new calendar event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a new event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a new event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create an appointment for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set an appointment for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create an appointment with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set an appointment with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a new meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a new meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Set a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+list_opportunity_intent	Tell me my opportunities
+list_opportunity_intent	Tell me my opportunities for {TIMEFRAME}
+list_opportunity_intent	Get my opportunities for {TIMEFRAME}
+list_opportunity_intent	List {TIMEFRAME} opportunities
+list_opportunity_intent	Get {TIMEFRAME} opportunities
+list_opportunity_intent	Find for opportunity {OPPORTUNITY_NAME}
+list_opportunity_intent	Search for opportunity {OPPORTUNITY_NAME}
+create_opportunity_intent	Create a new opportunity for {OPPORTUNITY_NAME} with the following details {DETAILS}
+create_opportunity_intent	Add a new opportunity for {OPPORTUNITY_NAME} with the following details {DETAILS}
+create_opportunity_intent	Create a new opportunity for {OPPORTUNITY_NAME} including the following details {DETAILS}
+create_opportunity_intent	Add a new opportunity for {OPPORTUNITY_NAME} including the following details {DETAILS}
+create_opportunity_intent	Create a new opportunity for {OPPORTUNITY_NAME} with the following information {DETAILS}
+create_opportunity_intent	Add a new opportunity for {OPPORTUNITY_NAME} with the following information {DETAILS}
+create_opportunity_intent	Create a new opportunity for {OPPORTUNITY_NAME} including the following information {DETAILS}
+create_opportunity_intent	Add a new opportunity for {OPPORTUNITY_NAME} including the following information {DETAILS}
+create_opportunity_intent	Create a new opportunity for {OPPORTUNITY_NAME} with the following description {DETAILS}
+create_opportunity_intent	Add a new opportunity for {OPPORTUNITY_NAME} with the following description {DETAILS}
+create_opportunity_intent	Create a new opportunity for {OPPORTUNITY_NAME} including the following description {DETAILS}
+create_opportunity_intent	Add a new opportunity for {OPPORTUNITY_NAME} including the following description {DETAILS}
+list_project_intent	Tell me my projects due this {TIMEFRAME}
+list_project_intent	Tell me my projects due today
+list_project_intent	Tell me my projects for {TIMEFRAME}
+list_project_intent	Get my projects for {TIMEFRAME}
+list_project_intent	List my projects for {TIMEFRAME}
+list_project_intent	List {TIMEFRAME} projects}
+list_project_intent	Get {TIMEFRAME} projects}
+list_project_intent	Find for project {PROJECT_NAME}
+list_project_intent	Search for project {PROJECT_NAME}
+list_project_intent	Get for project {PROJECT_NAME}
+create_project_intent	Create a new project {PROJECT_NAME}
+create_project_intent	Create a new project {PROJECT_NAME} with the following details {DETAILS}
+create_project_intent	Add a new project {PROJECT_NAME} with the following details {DETAILS}
+create_project_intent	Create a new project {PROJECT_NAME} including the following details {DETAILS}
+create_project_intent	Add a new project {PROJECT_NAME} including the following details {DETAILS}
+create_project_intent	Create a new project {PROJECT_NAME} with the following information {DETAILS}
+create_project_intent	Add a new project {PROJECT_NAME} with the following information {DETAILS}
+create_project_intent	Create a new project {PROJECT_NAME} including the following information {DETAILS}
+create_project_intent	Add a new project {PROJECT_NAME} including the following information {DETAILS}
+create_project_intent	Create a new project {PROJECT_NAME} with the following description {DETAILS}
+create_project_intent	Add a new project {PROJECT_NAME} with the following description {DETAILS}
+create_project_intent	Create a new project {PROJECT_NAME} including the following description {DETAILS}
+create_project_intent	Add a new project {PROJECT_NAME} including the following description {DETAILS}
+search_contact_intent	Find contact {FIRST_NAME} {LAST_NAME}
+search_contact_intent	Search contact {FIRST_NAME} {LAST_NAME}
+search_contact_intent	Find contact information for {FIRST_NAME} {LAST_NAME}
+search_contact_intent	Search contact information for {FIRST_NAME} {LAST_NAME}
+search_contact_intent	Find contact for {FIRST_NAME} {LAST_NAME}
+search_contact_intent	Search contact for {FIRST_NAME} {LAST_NAME}
+create_contact_intent	Create a new contact for {FIRST_NAME} {LAST_NAME} at {PHONE_NUMBER} at {EMAIL}
+create_contact_intent	Create a new contact for {LAST_NAME} at {PHONE_NUMBER} at {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} at {PHONE_NUMBER} at {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} {LAST_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} {LAST_NAME} with phone number {PHONE_NUMBER} at email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} {LAST_NAME} at phone number {PHONE_NUMBER} at email {EMAIL}
+create_contact_intent	Create a new contact for {LAST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_contact_intent	Create a new contact for {LAST_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_contact_intent	Create a new contact for {LAST_NAME} with phone number {PHONE_NUMBER} at email {EMAIL}
+create_contact_intent	Create a new contact for {LAST_NAME} at phone number {PHONE_NUMBER} at email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} with phone number {PHONE_NUMBER} at email {EMAIL}
+create_contact_intent	Create a new contact for {FIRST_NAME} at phone number {PHONE_NUMBER} at email {EMAIL}
+search_organization_intent	Find organization {ORGANIZATION_NAME}
+search_organization_intent	Search organization {ORGANIZATION_NAME}
+search_organization_intent	Find organization information for {ORGANIZATION_NAME}
+search_organization_intent	Search organization information for {ORGANIZATION_NAME}
+search_organization_intent	Find organization for {ORGANIZATION_NAME}
+search_organization_intent	Search organization for {ORGANIZATION_NAME}
+create_organization_intent	Create a new organization for {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION} with {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION} at {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION} with {PHONE_NUMBER}
+create_organization_intent	Create an organization for {ORGANIZATION} with {PHONE_NUMBER}
+create_organization_intent	Create a organization for {ORGANIZATION} at {PHONE_NUMBER}
+create_organization_intent	Create an organization for {ORGANIZATION} at {PHONE_NUMBER}
+create_organization_intent	Create a organization for {ORGANIZATION} with {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION} with {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION} at {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION} at {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION} with {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION} at {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION} with {PHONE_NUMBER}
+create_organization_intent	Create an organization {ORGANIZATION} with {PHONE_NUMBER}
+create_organization_intent	Create a organization {ORGANIZATION} at {PHONE_NUMBER}
+create_organization_intent	Create an organization {ORGANIZATION} at {PHONE_NUMBER}
+create_organization_intent	Create a organization {ORGANIZATION} with {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION} with {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION} at {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION} at {EMAIL}

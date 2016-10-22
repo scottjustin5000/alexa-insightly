@@ -1,6 +1,11 @@
 var moment = require('moment');
 
 function Event(title, start, end, allDay, location, details, id) {
+
+	if(!title || !start) {
+		throw new Error('Invalid Event. A title and start date are required.')
+	}
+
 	var self = this;
 	self.TITLE = title;
 	self.LOCATION = location;

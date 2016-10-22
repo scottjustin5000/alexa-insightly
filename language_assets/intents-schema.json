@@ -1,0 +1,153 @@
+{
+  "intents": [{
+    "intent": "help_intent",
+    "slots": []
+  }, {
+    "intent": "list_lead_intent",
+    "slots": [{
+      "name": "TIMEFRAME",
+      "type": "TIMESPANS"
+    }]
+  }, {
+    "intent": "create_lead_intent",
+    "slots": [{
+      "name": "FIRST_NAME",
+      "type": "AMAZON.US_FIRST_NAME"
+    }, {
+      "name": "LAST_NAME",
+      "type": "LASTNAMES"
+    }, {
+      "name": "PHONE_NUMBER",
+      "type": "AMAZON.NUMBER"
+    }, {
+      "name": "COMPANY_NAME",
+      "type": "LITERAL_NAMES"
+    }, {
+      "name": "EMAIL",
+      "type": "EMAILS"
+    }]
+  }, {
+    "intent": "list_task_intent",
+    "slots": [{
+      "name": "TIMEFRAME",
+      "type": "TIMESPANS"
+    }]
+  }, {
+    "intent": "create_task_intent",
+    "slots": [{
+      "name": "DATE",
+      "type": "AMAZON.DATE"
+    }, {
+      "name": "NAME",
+      "type": "LITERAL_NAMES"
+    }, {
+      "name": "PRIORITY",
+      "type": "PRIORITIES"
+    }]
+  }, {
+    "intent": "list_event_intent",
+    "slots": [{
+      "name": "TIMEFRAME",
+      "type": "TIMESPANS"
+    }]
+  }, {
+    "intent": "create_event_intent",
+    "slots": [{
+      "name": "DATE",
+      "type": "AMAZON.DATE"
+    }, {
+      "name": "TIME",
+      "type": "AMAZON.TIME"
+    }, {
+      "name": "TITLE",
+      "type": "LITERAL_NAMES"
+    }, {
+      "name": "FIRST_NAME",
+      "type": "AMAZON.US_FIRST_NAME"
+    }, {
+      "name": "LAST_NAME",
+      "type": "LASTNAMES"
+    }]
+  }, {
+    "intent": "list_opportunity_intent",
+    "slots": [{
+      "name": "TIMEFRAME",
+      "type": "TIMESPANS"
+    }, {
+      "name": "OPPORTUNITY_NAME",
+      "type": "LITERAL_NAMES"
+    }]
+  }, {
+    "intent": "create_opportunity_intent",
+    "slots": [{
+      "name": "OPPORTUNITY_NAME",
+      "type": "LITERAL_NAMES"
+    }, {
+      "name": "DETAILS",
+      "type": "LITERAL_DETAILS"
+    }]
+  }, {
+    "intent": "list_project_intent",
+    "slots": [{
+      "name": "TIMEFRAME",
+      "type": "TIMESPANS"
+    }, {
+      "name": "PROJECT_NAME",
+      "type": "LITERAL_NAMES"
+    }]
+  }, {
+    "intent": "create_project_intent",
+    "slots": [{
+      "name": "PROJECT_NAME",
+      "type": "PROJECTS"
+    }]
+  }, {
+    "intent": "search_contact_intent",
+    "slots": [{
+      "name": "FIRST_NAME",
+      "type": "AMAZON.US_FIRST_NAME"
+    }, {
+      "name": "LAST_NAME",
+      "type": "LASTNAMES"
+    }, {
+      "name": "PHONE_NUMBER",
+      "type": "PHONENUMBERS"
+    }, {
+      "name": "EMAIL",
+      "type": "EMAILS"
+    }, {
+      "name": "ORGANIZATION_NAME",
+      "type": "LITERAL_NAMES"
+    }]
+  }, {
+    "intent": "create_contact_intent",
+    "slots": [{
+      "name": "FIRST_NAME",
+      "type": "AMAZON.US_FIRST_NAME"
+    }, {
+      "name": "LAST_NAME",
+      "type": "LASTNAMES"
+    }, {
+      "name": "PHONE_NUMBER",
+      "type": "AMAZON.NUMBER"
+    }, {
+      "name": "EMAIL",
+      "type": "EMAILS"
+    }]
+  }, {
+    "intent": "search_organization_intent",
+    "slots": [{
+      "name": "ORGANIZATION_NAME",
+      "type": "LITERAL_NAMES"
+    }]
+  }, {
+    "intent": "create_organization_intent",
+    "slots": [{
+      "name": "PHONE_NUMBER",
+      "type": "AMAZON.NUMBER"
+    }, {
+      "name": "ORGANIZATION_NAME",
+      "type": "LITERAL_NAMES"
+    }]
+  }]
+}

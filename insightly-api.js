@@ -73,10 +73,11 @@ function get(route) {
 	return rp(options);
 }
 
-function filteredGet(route, term, field) {
+function filteredGet(route, filterData) {
+	var filter = getFilteredString(filterData);
 	var options = {
 		method: 'GET',
-		uri: API + route + "?brief=true&$filter="+field+"%20eq%20'"+term+"'",
+		uri: API + route + "?brief=true&$filter="+filter,
 		resolveWithFullResponse: true,
 		json: true,
 		headers: {

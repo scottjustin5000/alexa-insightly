@@ -15,7 +15,7 @@ Simple [AWS Lambda](http://aws.amazon.com/lambda) function that answers the basi
 
 "What tasks are due this week"
 
-"Which opportunities are projected this close this month"
+"Which opportunities were created this month"
 
 [Demo Video]()
 
@@ -60,8 +60,13 @@ For deploy.env, the following two setting are required:
 INSIGHTLY_TOKEN=
 INSIGHTLY_URL=
 ENVIRONMENT=
+USER_ID=
 
 ```
+The Insightly token is you API Key
+The Insightly URL is the address for the Insightly API, for example I'm using https://api.insight.ly/v2.1/
+Environment (local, test, production, etc)
+User Id variable is your Insightly User Id. This is required only for Tasks (requirements of the api)
 
 For .env, the following are required:
 

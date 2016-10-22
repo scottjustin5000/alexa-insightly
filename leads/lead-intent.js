@@ -3,6 +3,8 @@ var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
 var SpanTypes = require('../span-types');
 var ObjectType = require('../object-types');
+var EmailAddress = require('../email-address');
+var PhoneNumber = require('../phone-number');
 var api = require('../insightly-api');
 
 var _ = require('lodash');
@@ -45,8 +47,9 @@ function LeadsIntent() {
 	};
 
 	self.create = function(firstName, lastName, company, phoneNumber, email) {
-
-		var lead = new Lead(firstName, lastName, company, phoneNumber, email);
+		var formattedPhone = phoneNumber ? new PhoneNumber(phoneNumber).convertFromSpeech() : undefined;
+		var formattedEmail = email ? new EmailAddress(email).convertFromSpeech() : undefined;
+		var lead = new Lead(firstName, lastName, company, formattedPhone, formattedEmail);
 		return api.post(ObjectType.LEADS, lead)
 			.then(mapCreateResponse)
 			.catch(this.handleError);

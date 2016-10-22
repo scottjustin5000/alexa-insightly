@@ -1,25 +1,15 @@
 var Opportunity = require('../opportunities/opportunity');
 var OpportunityIntent = require('../opportunities/opportunity-intent');
+
+var moment = require('moment');
 var _ = require('lodash');
 
 describe('Test Opportunity Intent', function() {
 	
-	it('should fully format opportunity response', function(done){
+	it('should fully format response', function(done){
 		var opportunity = new Opportunity('super duper', 'we\'ll be rich!');
-		opportunity.FORECAST_CLOSE_DATE = new Date().addMonths(1);
-		opprtunity.ACTUAL_CLOSE_DATE = new Date();
-		var formattedForcast = opportunity.FORECAST_CLOSE_DATE.toLocaleDateString('en-US');
-		var formattedActual = opportunity.ACTUAL_CLOSE_DATE.toLocaleDateString('en-US');
 		var val = opportunity.format();
-		val.should.equal();
-		done();
-	});
-
-	it('should minimally format opportunity response', function(done){
-		
-		var opportunity = new Opportunity('super duper');
-		var val = opportunity.format();
-		val.should.equal('super duper');
+		val.should.equal('super duper<break time="500ms"/> and here are some details about this opportunity we\'ll be rich!');
 		done();
 	});
 
@@ -44,12 +34,12 @@ describe('Opportunities intent integration test', function() {
 			res.responseData.should.be.an.instanceOf(Array);
 			opportunity = res.responseData[0];
 			opportunity.should.have.property('OPPORTUNITY_NAME', 'great big deal');
-			opportunity.should.have.property('OPPORTUNITY_DETAILS', 'justin');
+			opportunity.should.have.property('OPPORTUNITY_DETAILS', 'some details');
 			done();
 		});
 	});
 	
-	it('should get leads created today', function(done){
+	it('should get opportunities created today', function(done){
 		return intent.get('today').then(function(res){
 			res.should.have.property('responseData');
 			res.responseData.should.be.an.instanceOf(Array);

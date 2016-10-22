@@ -8,11 +8,12 @@ var api = require('../insightly-api');
 var _ = require('lodash');
 
 function TaskIntent() {
+	
 	BaseIntent.call(this);
 	var self = this;
 
 	function mapTask(response) {
-		return new Task(response.NAME, response.DUE_DATE, response.PRIORITY, response.STATUS, response.PERCENT_COMPLETE, response.TASK_ID);
+		return new Task(response.Title, response.DUE_DATE, response.PRIORITY, response.STATUS, response.PERCENT_COMPLETE, response.TASK_ID);
 	}
 
 	function mapCreateResponse(response) {
@@ -23,7 +24,7 @@ function TaskIntent() {
 	function mapResponse(response) {
 
 		var dataResults = _.map(response.body, function(l) {
-			return mapLead(l);
+			return mapTask(l);
 		});
 		return new IntentResponse(ObjectType.TASKS, dataResults);
 	}
@@ -31,14 +32,19 @@ function TaskIntent() {
 	self.create = function(name, dueDate, priority) {
 		var task = new Task(name, dueDate, PriorityType.parse(priority));
 		return api.post(ObjectType.TASKS, task)
-			.then(mapResponse)
-			.catch(handleError);
+			.then(mapCreateResponse)
+			.catch(this.handleError);
 	};
 
 	self.get = function(span) {
-		return api.getBySpan(ObjectType.TASKS, span, 'DUE_DATE')
-			.then(this.mapResponse)
+		return api.getForSpan(ObjectType.TASKS, span, 'DUE_DATE')
+			.then(mapResponse)
 			.catch(this.handleError);
+	};
+
+	self.delete = function(id) {
+
+		return api.delete(ObjectType.TASKS, id);
 	};
 
 	return self;

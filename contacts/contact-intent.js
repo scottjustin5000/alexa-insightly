@@ -2,12 +2,17 @@ var Contact = require('./contact');
 var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
 var ObjectType = require('../object-types');
-var FilterData = reqiore('../filter-data');
+var FilterData = require('../filter-data');
+var EmailAddress = require('../email-address');
+var PhoneNumber = require('../phone-number');
 var api = require('../insightly-api');
 
 var _ = require('lodash');
 
 function ContactIntent() {
+
+	BaseIntent.call(this);
+	var self = this;
 
 	function mapContact(response) {
 		var contact = new Contact(response.FIRST_NAME, response.LAST_NAME, response.CONTACTINFOS, response.CONTACT_ID);
@@ -29,15 +34,15 @@ function ContactIntent() {
 		return new IntentResponse(ObjectType.CONTACTS, dataResults);
 	}
 
-	function creatContactInfo(info, type) {
+	function createContactInfo(info, type) {
 		return {
 			'TYPE': type.toUpperCase(),
-			'LABEL': 'WORK'
+			'LABEL': 'WORK',
 			'DETAIL': info
 		}
 	}
 
-	self.find = function(firstName, lastName) {
+	self.get = function(firstName, lastName) {
 		var filters = [];
 		if(firstName) {
 			filters.push(new FilterData('FIRST_NAME', 'eq', firstName));
@@ -53,10 +58,12 @@ function ContactIntent() {
 	self.create = function(firstName, lastName, phone, email) {
 		var contactInfos = [];
 		if(phone){
-			contactInfos.push(phone, 'phone');
+			var formattedPhone = new PhoneNumber(phone).convertFromSpeech();
+			contactInfos.push(createContactInfo(formattedPhone, 'phone'));
 		}
 		if(email) {
-			contactInfos.push(email, 'email');
+			var formattedEmail = new EmailAddress(email).convertFromSpeech();
+			contactInfos.push(createContactInfo(formattedEmail, 'email'));
 		}
 		var contact = new Contact(firstName, lastName, contactInfos);
 		return api.post(ObjectType.CONTACTS, contact)

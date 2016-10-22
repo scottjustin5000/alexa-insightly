@@ -6,11 +6,11 @@ describe('Test Leads Intent', function() {
 	
 	it('should fully format lead response', function(done){
 		
-		var lead = new Lead('scott', 'justin', '5000', '415555555', 'some-one@fake.com');
+		var lead = new Lead('scott', 'justin', '5000', '4155555555', 'some-one@fake.com');
 		lead.DATE_CREATED = new Date();
 		var formatted = lead.DATE_CREATED.toLocaleDateString('en-US')
 		var val = lead.format();
-		val.should.equal('scott justin<break time="500ms"/> from 5000<break time="500ms"/> phone number 4 1 5 5 5 5 5 5 5<break time="500ms"/> with email address some dash one at fake dot com<break time="500ms"/> created on '+formatted);
+		val.should.equal('scott justin<break time="500ms"/> from 5000<break time="500ms"/> phone number 4 1 5 5 5 5 5 5 5 5<break time="500ms"/> with email address some dash one at fake dot com<break time="500ms"/> created on '+formatted);
 		done();
 	});
 
@@ -43,7 +43,7 @@ describe('Leads intent integration test', function() {
 	});
 
 	it('should create new lead', function(done){
-		return intent.create('scott','justin','5000','4155555555', 'foo@insight.ly')
+		return intent.create('scott','justin','5000','4 1 5 5 5 5 5 5 5 5', 'foo at insight dot ly')
 		.then(function(res) {
 			res.should.be.an.instanceOf(Object);
 			res.should.have.property('type', 'Leads');

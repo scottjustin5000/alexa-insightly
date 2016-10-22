@@ -1,13 +1,18 @@
-var Organization = require('./contact');
+var Organization = require('./organization');
 var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
 var ObjectType = require('../object-types');
-var FilterData = reqiore('../filter-data');
+var FilterData = require('../filter-data');
+var EmailAddress = require('../email-address');
+var PhoneNumber = require('../phone-number');
 var api = require('../insightly-api');
 
 var _ = require('lodash');
 
 function OrganizationIntent() {
+
+	BaseIntent.call(this);
+	var self = this;
 
 	function mapOrganization(response) {
 		var org = new Organization(response.ORGANISATION_NAME,response.CONTACTINFOS, response.ORGANISATION_ID);
@@ -17,7 +22,7 @@ function OrganizationIntent() {
 	function mapCreateResponse(response) {
 		
 		var org = mapOrganization(response);
-		return new IntentResponse(ObjectType.ORGANIZATIONS, [contact]);
+		return new IntentResponse(ObjectType.ORGANIZATIONS, [org]);
 	}
 
 	function mapResponse(response) {
@@ -29,19 +34,19 @@ function OrganizationIntent() {
 		return new IntentResponse(ObjectType.ORGANIZATIONS, dataResults);
 	}
 
-	function creatContactInfo(info, type) {
+	function createContactInfo(info, type) {
 		return {
 			'TYPE': type.toUpperCase(),
-			'LABEL': 'WORK'
+			'LABEL': 'WORK',
 			'DETAIL': info
 		}
 	}
 
-	self.find = function(name) {
+	self.get = function(name) {
 		
-		var filter new FilterData('LAST_NAME', 'eq', name);
+		var filter = new FilterData('ORGANISATION_NAME', 'eq', name);
 
-		 return api.filteredGet(ObjectType.ORGANIZATIONS, filters)
+		 return api.filteredGet(ObjectType.ORGANIZATIONS, [filter])
 			.then(mapResponse)
 		 	.catch(this.handleError);
 	};
@@ -49,13 +54,15 @@ function OrganizationIntent() {
 	self.create = function(name, phone, email) {
 		var contactInfos = [];
 		if(phone){
-			contactInfos.push(phone, 'phone');
+			var formattedPhone = new PhoneNumber(phone).convertFromSpeech();
+			contactInfos.push(createContactInfo(formattedPhone, 'phone'));
 		}
 		if(email) {
-			contactInfos.push(email, 'email');
+			var formattedEmail = new EmailAddress(email).convertFromSpeech();
+			contactInfos.push(createContactInfo(formattedEmail, 'email'));
 		}
-		var contact = new Organization(name contactInfos);
-		return api.post(ObjectType.ORGANIZATIONS, contact)
+		var org = new Organization(name, contactInfos);
+		return api.post(ObjectType.ORGANIZATIONS, org)
 			.then(mapCreateResponse)
 			.catch(this.handleError);
 	};

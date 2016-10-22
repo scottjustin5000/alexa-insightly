@@ -1,4 +1,5 @@
 var EmailAddress = require('../email-address');
+var PhoneNumber  = require('../phone-number');
 
 function Lead(firstName, lastName, company, phoneNumber, email, id) {
 	
@@ -25,12 +26,8 @@ Lead.prototype.format = function(){
 		response += ('<break time="500ms"/> from ' + this.ORGANIZATION_NAME);
 	}
 	if(this.PHONE_NUMBER) {
-		var numbers = this.PHONE_NUMBER.replace(/\D/g, '');
-		var textNumbers = [];
-		for(var i = 0; i < numbers.length; i++) {
-			textNumbers.push(numbers[i]);
-		}
-		response += ('<break time="500ms"/> phone number ' + textNumbers.join(' '));
+		var numbers = new PhoneNumber(this.PHONE_NUMBER).convertToSpeech();
+		response += ('<break time="500ms"/> phone number ' + numbers.join(' '));
 	}
 	if(this.EMAIL_ADDRESS) {
 		var address = new EmailAddress(this.EMAIL_ADDRESS);

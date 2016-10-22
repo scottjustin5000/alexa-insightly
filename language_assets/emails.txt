@@ -20,4 +20,9 @@ fake hyphen name at some domain dot edu
 fake underscore name at some domain dot edu
 fake hyphen name at some domain dot gov
 fake underscore name at some domain dot gov
+fake at domain dot l y
+fake at domain dot i o
+something at name dot me
+another at something dot m e
+
 
