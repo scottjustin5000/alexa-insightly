@@ -90,12 +90,12 @@ app.intent('list_lead_intent', {
 
 	]
 }, function(req, res) {
-	var timeframe = req.slot('TIMEFRAME');
+	var timeFrame = req.slot('TIMEFRAME');
 	var intent = new LeadsIntent();
 	intent.get(timeFrame).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_lead_intent', {
@@ -156,7 +156,7 @@ app.intent('create_lead_intent', {
 	intent.create(firstName, lastName, company, phoneNumber, email).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('list_task_intent', {
@@ -183,7 +183,7 @@ app.intent('list_task_intent', {
 	intent.get(timeFrame).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_task_intent', {
@@ -215,7 +215,7 @@ app.intent('create_task_intent', {
 	intent.create(name, dueDate, priority).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('list_event_intent', {
@@ -242,7 +242,7 @@ app.intent('list_event_intent', {
 	intent.get(timeFrame).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_event_intent', {
@@ -294,7 +294,7 @@ app.intent('create_event_intent', {
 	intent.create(title, firstName, lastName, date, time).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('list_opportunity_intent', {
@@ -321,7 +321,7 @@ app.intent('list_opportunity_intent', {
 	opportunityIntent.get(timeframe, oppName).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_opportunity_intent', {
@@ -347,7 +347,7 @@ app.intent('create_opportunity_intent', {
 	opportunityIntent.create(oppName, details).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('list_project_intent', {
@@ -374,7 +374,7 @@ app.intent('list_project_intent', {
 	projectIntent.get(timeframe, projectName).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_project_intent', {
@@ -399,6 +399,7 @@ app.intent('create_project_intent', {
 	projectIntent.get(projectName, details).then(function(response) {
 		res.say(response.format()).send();
 	});
+	return false;
 });
 
 
@@ -425,7 +426,7 @@ app.intent('search_contact_intent', {
 	intent.get(firstName, lastName).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_contact_intent', {
@@ -462,7 +463,7 @@ app.intent('create_contact_intent', {
 	intent.create(firstName, lastName, phone, email).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 
@@ -485,7 +486,7 @@ app.intent('search_organization_intent', {
 	intent.get(name).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 app.intent('create_organization_intent', {
@@ -522,7 +523,7 @@ app.intent('create_organization_intent', {
 	intent.create(name, phone, email).then(function(response) {
 		res.say(response.format()).send();
 	});
-
+	return false;
 });
 
 //hack to support custom utterances in utterance expansion string
