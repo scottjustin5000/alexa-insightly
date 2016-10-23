@@ -60,6 +60,7 @@ describe('Events intent integration test', function() {
 			var found = _.first(results, function(r){
 				return r.ID === event.ID;
 			});
+			done();
 		});
 	});
 

@@ -346,8 +346,8 @@ list_project_intent	Tell me my projects due today
 list_project_intent	Tell me my projects for {TIMEFRAME}
 list_project_intent	Get my projects for {TIMEFRAME}
 list_project_intent	List my projects for {TIMEFRAME}
-list_project_intent	List {TIMEFRAME} projects}
-list_project_intent	Get {TIMEFRAME} projects}
+list_project_intent	List {TIMEFRAME} projects
+list_project_intent	Get {TIMEFRAME} projects
 list_project_intent	Find for project {PROJECT_NAME}
 list_project_intent	Search for project {PROJECT_NAME}
 list_project_intent	Get for project {PROJECT_NAME}
@@ -391,35 +391,35 @@ search_organization_intent	Find organization information for {ORGANIZATION_NAME}
 search_organization_intent	Search organization information for {ORGANIZATION_NAME}
 search_organization_intent	Find organization for {ORGANIZATION_NAME}
 search_organization_intent	Search organization for {ORGANIZATION_NAME}
-create_organization_intent	Create a new organization for {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a new organization for {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a organization for {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create an organization for {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a organization for {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create an organization for {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a new organization for {ORGANIZATION} with {PHONE_NUMBER} at {EMAIL}
-create_organization_intent	Create a new organization for {ORGANIZATION} at {PHONE_NUMBER} at {EMAIL}
-create_organization_intent	Create a organization for {ORGANIZATION} with {PHONE_NUMBER}
-create_organization_intent	Create an organization for {ORGANIZATION} with {PHONE_NUMBER}
-create_organization_intent	Create a organization for {ORGANIZATION} at {PHONE_NUMBER}
-create_organization_intent	Create an organization for {ORGANIZATION} at {PHONE_NUMBER}
-create_organization_intent	Create a organization for {ORGANIZATION} with {EMAIL}
-create_organization_intent	Create an organization for {ORGANIZATION} with {EMAIL}
-create_organization_intent	Create a organization for {ORGANIZATION} at {EMAIL}
-create_organization_intent	Create an organization for {ORGANIZATION} at {EMAIL}
-create_organization_intent	Create a new organization {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a new organization {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a organization {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create an organization {ORGANIZATION} with phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a organization {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create an organization {ORGANIZATION} at phone number {PHONE_NUMBER} with email {EMAIL}
-create_organization_intent	Create a new organization {ORGANIZATION} with {PHONE_NUMBER} at {EMAIL}
-create_organization_intent	Create a new organization {ORGANIZATION} at {PHONE_NUMBER} at {EMAIL}
-create_organization_intent	Create a organization {ORGANIZATION} with {PHONE_NUMBER}
-create_organization_intent	Create an organization {ORGANIZATION} with {PHONE_NUMBER}
-create_organization_intent	Create a organization {ORGANIZATION} at {PHONE_NUMBER}
-create_organization_intent	Create an organization {ORGANIZATION} at {PHONE_NUMBER}
-create_organization_intent	Create a organization {ORGANIZATION} with {EMAIL}
-create_organization_intent	Create an organization {ORGANIZATION} with {EMAIL}
-create_organization_intent	Create a organization {ORGANIZATION} at {EMAIL}
-create_organization_intent	Create an organization {ORGANIZATION} at {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION_NAME} with {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a new organization for {ORGANIZATION_NAME} at {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION_NAME} with {PHONE_NUMBER}
+create_organization_intent	Create an organization for {ORGANIZATION_NAME} with {PHONE_NUMBER}
+create_organization_intent	Create a organization for {ORGANIZATION_NAME} at {PHONE_NUMBER}
+create_organization_intent	Create an organization for {ORGANIZATION_NAME} at {PHONE_NUMBER}
+create_organization_intent	Create a organization for {ORGANIZATION_NAME} with {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION_NAME} with {EMAIL}
+create_organization_intent	Create a organization for {ORGANIZATION_NAME} at {EMAIL}
+create_organization_intent	Create an organization for {ORGANIZATION_NAME} at {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION_NAME} with phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION_NAME} at phone number {PHONE_NUMBER} with email {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION_NAME} with {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a new organization {ORGANIZATION_NAME} at {PHONE_NUMBER} at {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION_NAME} with {PHONE_NUMBER}
+create_organization_intent	Create an organization {ORGANIZATION_NAME} with {PHONE_NUMBER}
+create_organization_intent	Create a organization {ORGANIZATION_NAME} at {PHONE_NUMBER}
+create_organization_intent	Create an organization {ORGANIZATION_NAME} at {PHONE_NUMBER}
+create_organization_intent	Create a organization {ORGANIZATION_NAME} with {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION_NAME} with {EMAIL}
+create_organization_intent	Create a organization {ORGANIZATION_NAME} at {EMAIL}
+create_organization_intent	Create an organization {ORGANIZATION_NAME} at {EMAIL}

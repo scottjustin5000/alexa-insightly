@@ -363,7 +363,7 @@ app.intent('list_project_intent', {
 		"Tell me my projects due today",
 		"Tell me my projects for {-|TIMEFRAME}",
 		"{Get|List} my projects for {-|TIMEFRAME}",
-		"{List|Get} {-|TIMEFRAME} projects}",
+		"{List|Get} {-|TIMEFRAME} projects",
 		"{Find|Search|Get} for project {-|PROJECT_NAME}"
 	]
 }, function(req, res) {
@@ -380,8 +380,11 @@ app.intent('list_project_intent', {
 app.intent('create_project_intent', {
 	"slots": [{
 		"name": "PROJECT_NAME",
-		"type": "PROJECTS"
-	}],
+		"type": "LITERAL_NAMES"
+	}, {
+      "name": "DETAILS",
+      "type": "LITERAL_DETAILS"
+    }],
 	"utterances": [
 		"Create a new project {-|PROJECT_NAME}",
 		"{Create|Add} a new project {-|PROJECT_NAME} {with|including} the following details {-|DETAILS}",
@@ -406,15 +409,6 @@ app.intent('search_contact_intent', {
 	}, {
 		"name": "LAST_NAME",
 		"type": "LASTNAMES"
-	}, {
-		"name": "PHONE_NUMBER",
-		"type": "PHONENUMBERS"
-	}, {
-		"name": "EMAIL",
-		"type": "EMAILS"
-	}, {
-		"name": "ORGANIZATION_NAME",
-		"type": "LITERAL_NAMES"
 	}],
 	"utterances": [
 		"{Find|Search} contact {-|FIRST_NAME} {-|LAST_NAME}",
@@ -501,18 +495,21 @@ app.intent('create_organization_intent', {
 	}, {
 		"name": "ORGANIZATION_NAME",
 		"type": "LITERAL_NAMES"
+	},{
+		"name": "EMAIL",
+		"type": "EMAILS"
 	}],
 	"utterances": [
-		"Create a new organization for {-|ORGANIZATION} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
-		"Create {a|an} organization for {-|ORGANIZATION} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
-		"Create a new organization for {-|ORGANIZATION} {with|at} {-|PHONE_NUMBER} at {-|EMAIL}",
-		"Create {a|an} organization for {-|ORGANIZATION} {with|at} {-|PHONE_NUMBER}",
-		"Create {a|an} organization for {-|ORGANIZATION} {with|at} {-|EMAIL}",
-		"Create a new organization {-|ORGANIZATION} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
-		"Create {a|an} organization {-|ORGANIZATION} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
-		"Create a new organization {-|ORGANIZATION} {with|at} {-|PHONE_NUMBER} at {-|EMAIL}",
-		"Create {a|an} organization {-|ORGANIZATION} {with|at} {-|PHONE_NUMBER}",
-		"Create {a|an} organization {-|ORGANIZATION} {with|at} {-|EMAIL}"
+		"Create a new organization for {-|ORGANIZATION_NAME} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
+		"Create {a|an} organization for {-|ORGANIZATION_NAME} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
+		"Create a new organization for {-|ORGANIZATION_NAME} {with|at} {-|PHONE_NUMBER} at {-|EMAIL}",
+		"Create {a|an} organization for {-|ORGANIZATION_NAME} {with|at} {-|PHONE_NUMBER}",
+		"Create {a|an} organization for {-|ORGANIZATION_NAME} {with|at} {-|EMAIL}",
+		"Create a new organization {-|ORGANIZATION_NAME} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
+		"Create {a|an} organization {-|ORGANIZATION_NAME} {with|at} phone number {-|PHONE_NUMBER} with email {-|EMAIL}",
+		"Create a new organization {-|ORGANIZATION_NAME} {with|at} {-|PHONE_NUMBER} at {-|EMAIL}",
+		"Create {a|an} organization {-|ORGANIZATION_NAME} {with|at} {-|PHONE_NUMBER}",
+		"Create {a|an} organization {-|ORGANIZATION_NAME} {with|at} {-|EMAIL}"
 	]
 }, function(req, res) {
 

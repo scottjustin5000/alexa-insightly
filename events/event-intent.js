@@ -48,7 +48,7 @@ function EventIntent() {
 	}
 
 	self.create = function(title, firstName, lastName, date, time) {
-		
+
 		var eventTitle = (title ||'') + ' ' +(firstName || '')+ ' '+(lastName || ' ');
 		var eventDate = getStartTime(date, time);
 		var end = moment(eventDate).add(1, 'hours').toDate();
@@ -60,9 +60,9 @@ function EventIntent() {
 
 	self.get = function(span) {
 
-		return api.getBySpan(ObjectType.EVENTS, span, 'START_DATE_UTC')
+		return api.getForSpan(ObjectType.EVENTS, span, 'START_DATE_UTC')
 		.then(mapResponse)
-		.catch(handleError);
+		.catch(this.handleError);
 	}
 
 	self.delete = function(id) {

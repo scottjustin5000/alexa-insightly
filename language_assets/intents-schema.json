@@ -99,7 +99,10 @@
     "intent": "create_project_intent",
     "slots": [{
       "name": "PROJECT_NAME",
-      "type": "PROJECTS"
+      "type": "LITERAL_NAMES"
+    }, {
+      "name": "DETAILS",
+      "type": "LITERAL_DETAILS"
     }]
   }, {
     "intent": "search_contact_intent",
@@ -111,7 +114,7 @@
       "type": "LASTNAMES"
     }, {
       "name": "PHONE_NUMBER",
-      "type": "PHONENUMBERS"
+      "type": "AMAZON.NUMBER"
     }, {
       "name": "EMAIL",
       "type": "EMAILS"
@@ -146,6 +149,9 @@
       "name": "PHONE_NUMBER",
       "type": "AMAZON.NUMBER"
     }, {
+    "name": "EMAIL",
+    "type": "EMAILS"
+  },{
       "name": "ORGANIZATION_NAME",
       "type": "LITERAL_NAMES"
     }]

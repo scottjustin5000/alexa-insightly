@@ -42,11 +42,12 @@ function getFilteredString(filteredData) {
 	return filter.join('and%20');
 
 }
-//needs to be updated to work like filtered string
+
 function getForSpan(route, span, field) {
+	var query = '?brief=true&$filter=' + getSpanString(route, span, field);
 	var options = {
 		method: 'GET',
-		uri: API + route + '?brief=true&$filter=' + getSpanString(route, span, field),
+		uri: API + route + query,
 		resolveWithFullResponse: true,
 		json: true,
 		headers: {
