@@ -33,7 +33,7 @@ Opportunity.prototype.format = function() {
 		response += '<break time="500ms"/>it closed on ' + moment(this.ACTUAL_CLOSE_DATE).format('MMMM Do YYYY');
 	}
 	if(this.OPPORTUNITY_DETAILS) {
-		response += ('<break time="500ms"/> and here are some details about this opportunity ' + this.OPPORTUNITY_DETAILS);
+		response += ('<break time="500ms"/> and here are some details about this opportunity<break time="500ms"/>' + this.OPPORTUNITY_DETAILS);
 	}
 	return response;
 };

@@ -22,7 +22,7 @@ Project.prototype.format = function() {
 		response +='<break time="500ms"/> completed on  '+ moment(this.COMPLETED_DATE).format('MMMM Do YYYY');
 	}
 	if(this.PROJECT_DETAILS) {
-		response += ('<break time="500ms"/> and here are some details about this ptojrct ' + this.PROJECT_DETAILS);
+		response += ('<break time="500ms"/> and here are some details about this project<break time="500ms"/>' + this.PROJECT_DETAILS);
 	}
 	return response;
 };

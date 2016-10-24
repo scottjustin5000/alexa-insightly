@@ -25,7 +25,7 @@ function OpportunityIntent() {
 	function mapCreateResponse(response) {
 		
 		var opp = mapOpportunity(response);
-		return new IntentResponse(ObjectType.OPPORTUNITIES, [opp]);
+		return new IntentResponse(ObjectType.OPPORTUNITIES, [opp], false, true);
 	}
 
 	function mapResponse(response) {
@@ -34,7 +34,7 @@ function OpportunityIntent() {
 		var dataResults = _.map(responseData, function(l) {
 			return mapOpportunity(l);
 		});
-		return new IntentResponse(ObjectType.OPPORTUNITIES, dataResults, false, true);
+		return new IntentResponse(ObjectType.OPPORTUNITIES, dataResults);
 	}
 
 	function getForSpan(span) {
