@@ -22,7 +22,7 @@ function OrganizationIntent() {
 	function mapCreateResponse(response) {
 		
 		var org = mapOrganization(response);
-		return new IntentResponse(ObjectType.ORGANIZATIONS, [org]);
+		return new IntentResponse(ObjectType.ORGANIZATIONS, [org], false, true);
 	}
 
 	function mapResponse(response) {
@@ -31,7 +31,7 @@ function OrganizationIntent() {
 		var dataResults = _.map(responseData, function(o) {
 			return mapOrganization(o);
 		});
-		return new IntentResponse(ObjectType.ORGANIZATIONS, dataResults, false, true);
+		return new IntentResponse(ObjectType.ORGANIZATIONS, dataResults);
 	}
 
 	function createContactInfo(info, type) {

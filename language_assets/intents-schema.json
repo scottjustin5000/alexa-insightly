@@ -149,9 +149,9 @@
       "name": "PHONE_NUMBER",
       "type": "AMAZON.NUMBER"
     }, {
-    "name": "EMAIL",
-    "type": "EMAILS"
-  },{
+      "name": "EMAIL",
+      "type": "EMAILS"
+    }, {
       "name": "ORGANIZATION_NAME",
       "type": "LITERAL_NAMES"
     }]

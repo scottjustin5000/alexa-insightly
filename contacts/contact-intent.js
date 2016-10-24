@@ -22,7 +22,7 @@ function ContactIntent() {
 	function mapCreateResponse(response) {
 		
 		var contact = mapContact(response);
-		return new IntentResponse(ObjectType.CONTACTS, [contact]);
+		return new IntentResponse(ObjectType.CONTACTS, [contact], false, true);
 	}
 
 	function mapResponse(response) {
@@ -31,7 +31,7 @@ function ContactIntent() {
 		var dataResults = _.map(responseData, function(c) {
 			return mapContact(c);
 		});
-		return new IntentResponse(ObjectType.CONTACTS, dataResults, false, true);
+		return new IntentResponse(ObjectType.CONTACTS, dataResults);
 	}
 
 	function createContactInfo(info, type) {
