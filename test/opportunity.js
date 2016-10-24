@@ -9,7 +9,7 @@ describe('Test Opportunity Intent', function() {
 	it('should fully format response', function(done){
 		var opportunity = new Opportunity('super duper', 'we\'ll be rich!');
 		var val = opportunity.format();
-		val.should.equal('super duper<break time="500ms"/> and here are some details about this opportunity we\'ll be rich!');
+		val.should.equal('super duper<break time="500ms"/> and here are some details about this opportunity<break time="500ms"/>we\'ll be rich!');
 		done();
 	});
 

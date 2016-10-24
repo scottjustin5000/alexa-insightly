@@ -1,5 +1,7 @@
 var Lead = require('../leads/lead');
 var LeadIntent = require('../leads/lead-intent');
+
+var moment = require('moment');
 var _ = require('lodash');
 
 describe('Test Leads Intent', function() {

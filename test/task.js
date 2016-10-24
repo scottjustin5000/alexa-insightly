@@ -9,10 +9,10 @@ describe('Test Task Intent', function() {
 	it('should fully format task response', function(done) {
 		
 		var dueDate = new Date();
-		var task = new Task('my task', dueDate, 1, 'NOT_STARTED', 0);
+		var task = new Task('my task', dueDate, 1, 'Not Started', 0);
 		var formattedDueDate = moment(dueDate).format('MMMM Do YYYY');
 		var val = task.format();
-		val.should.equal('my task<break time="500ms"/> beginning '+formattedDueDate+'<break time="500ms"/> with NOT_STARTED status');
+		val.should.equal('my task<break time="500ms"/> due '+formattedDueDate+'<break time="500ms"/> with Not Started status');
 		done();
 	});
 
@@ -22,7 +22,7 @@ describe('Test Task Intent', function() {
 		var task = new Task('my task', dueDate);
 		var formattedDueDate = moment(dueDate).format('MMMM Do YYYY');
 		var val = task.format();
-		val.should.equal('my task<break time="500ms"/> beginning '+formattedDueDate+'<break time="500ms"/> with Not Started status');
+		val.should.equal('my task<break time="500ms"/> due '+formattedDueDate+'<break time="500ms"/> with Not Started status');
 		done();
 	});
 
@@ -48,7 +48,7 @@ describe('Tasks intent integration test', function() {
 	});
 
 	it('should create new Task', function(done) {
-		
+
 		return intent.create('my task', moment(new Date()).format('YYYY-MM-DD'), 1, 'Not Started', 0)
 		.then(function(res) {
 			res.should.be.an.instanceOf(Object);
