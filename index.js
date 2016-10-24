@@ -263,31 +263,31 @@ app.intent('create_event_intent', {
 		"type": "LASTNAMES"
 	}],
 	"utterances": [
-		"{Create|Set} a new calendar event titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new calendar event {for|with} {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new event titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new event {for|with}  {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} an appointment titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} an appointment {for|with}  {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new meeting titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new meeting {for|with} {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting {for|with} {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting {for|with}  {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new calendar event {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new event {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}",
-		"{Create|Set} an appointment {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a new meeting {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}"
+		"{Create|Set} a new calendar event titled {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new calendar event {for|with} {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new event titled {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new event {for|with}  {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} an appointment titled {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} an appointment {for|with}  {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new meeting titled {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new meeting {for|with} {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting titled {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting {for|with} {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting titled {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting {for|with} {-|TITLE} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new calendar event {for|with} {-|FIRST_NAME} {-|LAST_NAME} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new event {for|with} {-|FIRST_NAME} {-|LAST_NAME} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} an appointment {for|with} {-|FIRST_NAME} {-|LAST_NAME} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a new meeting {for|with} {-|FIRST_NAME} {-|LAST_NAME} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting {for|with} {-|FIRST_NAME} {-|LAST_NAME} {for|on} {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting {for|with} {-|FIRST_NAME} {-|LAST_NAME} {for|on} {-|DATE} at {-|TIME}"
 	]
 }, function(req, res) {
-	var title = req.slots('TITLE');
+	var title = req.slot('TITLE');
 	var firstName = req.slot('FIRST_NAME');
 	var lastName = req.slot('LAST_NAME');
-	var date = req.slots('DATE');
-	var time = req.slots('TIME');
+	var date = req.slot('DATE');
+	var time = req.slot('TIME');
 
 	var intent = new EventIntent();
 	intent.create(title, firstName, lastName, date, time).then(function(response) {
@@ -520,5 +520,5 @@ app.intent('create_organization_intent', {
 });
 
 //hack to support custom utterances in utterance expansion string
-//console.log(app.utterances().replace(/\{\-\|/g, '{'));
+console.log(app.utterances().replace(/\{\-\|/g, '{'));
 module.exports = app;

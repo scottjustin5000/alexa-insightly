@@ -264,64 +264,124 @@ list_event_intent	List {TIMEFRAME} meetings
 list_event_intent	Get {TIMEFRAME} meetings
 create_event_intent	Create a new calendar event titled {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new calendar event titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event titled {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new calendar event titled {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a new calendar event for {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new calendar event for {TITLE} for {DATE} at {TIME}
 create_event_intent	Create a new calendar event with {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new calendar event with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event for {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new calendar event for {TITLE} on {DATE} at {TIME}
+create_event_intent	Create a new calendar event with {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new calendar event with {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a new event titled {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new event titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new event titled {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new event titled {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a new event for {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new event for {TITLE} for {DATE} at {TIME}
 create_event_intent	Create a new event with {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new event with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new event for {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new event for {TITLE} on {DATE} at {TIME}
+create_event_intent	Create a new event with {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new event with {TITLE} on {DATE} at {TIME}
 create_event_intent	Create an appointment titled {TITLE} for {DATE} at {TIME}
 create_event_intent	Set an appointment titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create an appointment titled {TITLE} on {DATE} at {TIME}
+create_event_intent	Set an appointment titled {TITLE} on {DATE} at {TIME}
 create_event_intent	Create an appointment for {TITLE} for {DATE} at {TIME}
 create_event_intent	Set an appointment for {TITLE} for {DATE} at {TIME}
 create_event_intent	Create an appointment with {TITLE} for {DATE} at {TIME}
 create_event_intent	Set an appointment with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create an appointment for {TITLE} on {DATE} at {TIME}
+create_event_intent	Set an appointment for {TITLE} on {DATE} at {TIME}
+create_event_intent	Create an appointment with {TITLE} on {DATE} at {TIME}
+create_event_intent	Set an appointment with {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a new meeting titled {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new meeting titled {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new meeting titled {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a new meeting for {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new meeting for {TITLE} for {DATE} at {TIME}
 create_event_intent	Create a new meeting with {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a new meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a new meeting for {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new meeting for {TITLE} on {DATE} at {TIME}
+create_event_intent	Create a new meeting with {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a new meeting with {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a meeting titled {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting titled {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a meeting titled {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a meeting for {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a meeting for {TITLE} for {DATE} at {TIME}
 create_event_intent	Create a meeting with {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a meeting for {TITLE} on {DATE} at {TIME}
+create_event_intent	Create a meeting with {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a meeting with {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a meeting titled {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a meeting titled {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting titled {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a meeting titled {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a meeting for {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a meeting for {TITLE} for {DATE} at {TIME}
 create_event_intent	Create a meeting with {TITLE} for {DATE} at {TIME}
 create_event_intent	Set a meeting with {TITLE} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a meeting for {TITLE} on {DATE} at {TIME}
+create_event_intent	Create a meeting with {TITLE} on {DATE} at {TIME}
+create_event_intent	Set a meeting with {TITLE} on {DATE} at {TIME}
 create_event_intent	Create a new calendar event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a new calendar event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Create a new calendar event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a new calendar event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new calendar event for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a new calendar event for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Create a new calendar event with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a new calendar event with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
 create_event_intent	Create a new event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a new event for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Create a new event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a new event with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new event for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a new event for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Create a new event with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a new event with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
 create_event_intent	Create an appointment for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set an appointment for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Create an appointment with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set an appointment with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create an appointment for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set an appointment for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Create an appointment with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set an appointment with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
 create_event_intent	Create a new meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a new meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Create a new meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a new meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a new meeting for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a new meeting for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Create a new meeting with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a new meeting with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
 create_event_intent	Create a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Create a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a meeting for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Create a meeting with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a meeting with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
 create_event_intent	Create a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a meeting for {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Create a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
 create_event_intent	Set a meeting with {FIRST_NAME} {LAST_NAME} for {DATE} at {TIME}
+create_event_intent	Create a meeting for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a meeting for {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Create a meeting with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
+create_event_intent	Set a meeting with {FIRST_NAME} {LAST_NAME} on {DATE} at {TIME}
 list_opportunity_intent	Tell me my opportunities
 list_opportunity_intent	Tell me my opportunities for {TIMEFRAME}
 list_opportunity_intent	Get my opportunities for {TIMEFRAME}

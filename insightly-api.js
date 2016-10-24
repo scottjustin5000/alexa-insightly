@@ -21,7 +21,7 @@ function getSpanString(span, field) {
 	if(!span || span === SpanTypes.UNKNOWN) {
 		throw new Error('Unknown Span');
 	}
-	
+
 	var start = getStart(span);
 	var end = getEnd(span);
 
@@ -44,8 +44,9 @@ function getFilteredString(filteredData) {
 }
 
 function getForSpan(route, span, field) {
-	var query = '?brief=true&$filter=' + getSpanString(span, field);
 
+	var query = '?brief=true&$filter=' + getSpanString(span, field);
+	console.log(query);
 	var options = {
 		method: 'GET',
 		uri: API + route + query,

@@ -59,8 +59,8 @@ function EventIntent() {
 	}
 
 	self.get = function(span) {
-
-		return api.getForSpan(ObjectType.EVENTS, span, 'START_DATE_UTC')
+		var spanType = !span ? SpanTypes.WEEK : SpanTypes.parse(span);
+		return api.getForSpan(ObjectType.EVENTS, spanType, 'START_DATE_UTC')
 		.then(mapResponse)
 		.catch(this.handleError);
 	}
