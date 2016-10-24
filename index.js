@@ -14,7 +14,7 @@ var app = new Alexa.app('insightly-app');
 
 
 app.launch(function(req, res) {
-	var prompt = 'Ask my something about your Insight Lee CRM';
+	var prompt = 'Ask me something about your Insight Lee CRM';
 	res.say('').reprompt(prompt).shouldEndSession(false);
 });
 
