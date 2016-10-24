@@ -37,7 +37,8 @@ function TaskIntent() {
 	};
 
 	self.get = function(span) {
-		return api.getForSpan(ObjectType.TASKS, span, 'DUE_DATE')
+		var spanType = !span ? SpanTypes.WEEK : SpanTypes.parse(span);
+		return api.getForSpan(ObjectType.TASKS, spanType, 'DUE_DATE')
 			.then(mapResponse)
 			.catch(this.handleError);
 	};

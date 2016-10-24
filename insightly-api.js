@@ -45,7 +45,7 @@ function getFilteredString(filteredData) {
 
 function getForSpan(route, span, field) {
 
-	var query = '?brief=true&$filter=' + getSpanString(span, field);
+	var query = '?brief=true$filter=' + getSpanString(span, field);
 	console.log(query);
 	var options = {
 		method: 'GET',
@@ -80,7 +80,7 @@ function filteredGet(route, filterData) {
 	var filter = getFilteredString(filterData);
 	var options = {
 		method: 'GET',
-		uri: API + route + "?brief=true&$filter="+filter,
+		uri: API + route + "?brief=true$filter="+filter,
 		resolveWithFullResponse: true,
 		json: true,
 		headers: {

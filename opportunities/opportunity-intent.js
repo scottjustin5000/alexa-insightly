@@ -38,8 +38,8 @@ function OpportunityIntent() {
 	}
 
 	function getForSpan(span) {
-
-		return api.getForSpan(ObjectType.OPPORTUNITIES, span, 'DATE_CREATED_UTC')
+		var spanType = !span ? SpanTypes.WEEK : SpanTypes.parse(span);
+		return api.getForSpan(ObjectType.OPPORTUNITIES, spanType, 'DATE_CREATED_UTC')
 			.then(mapResponse)
 			.catch(this.handleError);
 	}
