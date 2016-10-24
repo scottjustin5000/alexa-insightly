@@ -2,6 +2,7 @@ var Project = require('./project');
 var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
 var ObjectType = require('../object-types');
+var SpanTypes = require('../span-types');
 var FilterData = require('../filter-data');
 var api = require('../insightly-api');
 

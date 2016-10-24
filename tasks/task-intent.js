@@ -3,6 +3,7 @@ var IntentResponse = require('../intent-response');
 var PriorityType = require('./priority-types');
 var BaseIntent = require('../base-intent');
 var ObjectType = require('../object-types');
+var SpanTypes = require('../span-types');
 var api = require('../insightly-api');
 
 var _ = require('lodash');

@@ -20,7 +20,7 @@ IntentResponse.prototype.format = function() {
 		return data.format();
 	});
 	var fullResponse = formattedObjectResponses.join('<break time="1s"/>');
-	var intro = this.createdResponse ? 'The following was SuccessFully Created. '  : 'Here are the result for your '+this.type+'.'
+	var intro = this.createdResponse ? 'The following was SuccessFully Created. '  : 'Here are the results for your '+this.type+'.'
 	return intro +' <break time="500ms"/> ' + fullResponse;
 };
 

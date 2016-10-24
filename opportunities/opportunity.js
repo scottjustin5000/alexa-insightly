@@ -20,14 +20,13 @@ Opportunity.prototype.format = function() {
 	var response = this.OPPORTUNITY_NAME;
 	
 	if(this.BID_AMOUNT) {
-		var address = new EmailAddress(this.EMAIL_ADDRESS);
 	    response += ('<break time="500ms"/> for a bid amount of ' +  this.BID_AMOUNT + ' ' + this.BID_CURRENCY);
 	}
 	if(this.PROBABILITY) {
-		response += ('<break time="500ms"/> this opportunity was given a probability of '+ this.PROBABILITY);
+		response += ('<break time="500ms"/> this opportunity was given a probability of '+ this.PROBABILITY +' percent');
 	}
 	if(this.FORECAST_CLOSE_DATE) {
-		response += '<break time="500ms"/> it  was forecast to close on ' + moment(this.FORECAST_CLOSE_DATE).format('MMMM Do YYYY');
+		response += '<break time="500ms"/> it was forecast to close on ' + moment(this.FORECAST_CLOSE_DATE).format('MMMM Do YYYY');
 	}
 	if(this.ACTUAL_CLOSE_DATE) {
 		response += '<break time="500ms"/>it closed on ' + moment(this.ACTUAL_CLOSE_DATE).format('MMMM Do YYYY');

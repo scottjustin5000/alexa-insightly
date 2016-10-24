@@ -239,6 +239,12 @@ create_task_intent	Add a new task {NAME}
 create_task_intent	Create a new {PRIORITY} priority task {NAME} due {DATE}
 create_task_intent	Set a new {PRIORITY} priority task {NAME} due {DATE}
 create_task_intent	Add a new {PRIORITY} priority task {NAME} due {DATE}
+create_task_intent	Create a new {PRIORITY} priority task {NAME} due on {DATE}
+create_task_intent	Set a new {PRIORITY} priority task {NAME} due on {DATE}
+create_task_intent	Add a new {PRIORITY} priority task {NAME} due on {DATE}
+create_task_intent	Create a new {PRIORITY} priority task {NAME} required by {DATE}
+create_task_intent	Set a new {PRIORITY} priority task {NAME} required by {DATE}
+create_task_intent	Add a new {PRIORITY} priority task {NAME} required by {DATE}
 create_task_intent	Create a new {PRIORITY} priority task {NAME}
 create_task_intent	Set a new {PRIORITY} priority task {NAME}
 create_task_intent	Add a new {PRIORITY} priority task {NAME}

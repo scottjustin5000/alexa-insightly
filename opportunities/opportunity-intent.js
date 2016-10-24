@@ -2,6 +2,7 @@ var Opportunity = require('./opportunity');
 var IntentResponse = require('../intent-response');
 var BaseIntent = require('../base-intent');
 var ObjectType = require('../object-types');
+var SpanTypes = require('../span-types');
 var FilterData = require('../filter-data');
 var api = require('../insightly-api');
 
@@ -13,12 +14,12 @@ function OpportunityIntent() {
 
 	function mapOpportunity(result) {
 		var opportunity = new Opportunity(result.OPPORTUNITY_NAME, result.OPPORTUNITY_DETAILS, result.OPPORTUNITY_ID);
-		opportunity.PROBABILITY;
-		opportunity.OPPORTUNITY_STATE;
-		opportunity.FORECAST_CLOSE_DATE;
-		opportunity.ACTUAL_CLOSE_DATE;
-		opportunity.BID_AMOUNT;
-		opportunity.BID_CURRENCY;
+		opportunity.PROBABILITY = result.PROBABILITY;
+		opportunity.OPPORTUNITY_STATE = result.OPPORTUNITY_STATE;
+		opportunity.FORECAST_CLOSE_DATE = result.FORECAST_CLOSE_DATE;
+		opportunity.ACTUAL_CLOSE_DATE = result.ACTUAL_CLOSE_DATE;
+		opportunity.BID_AMOUNT = result.BID_AMOUNT;
+		opportunity.BID_CURRENCY = result.BID_CURRENCY;
 		return opportunity;
 	}
 

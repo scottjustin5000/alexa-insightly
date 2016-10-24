@@ -203,6 +203,8 @@ app.intent('create_task_intent', {
 		"{Create|Set|Add} a new task {-|NAME} due {-|DATE}",
 		"{Create|Set|Add} a new task {-|NAME}",
 		"{Create|Set|Add} a new {-|PRIORITY} priority task {-|NAME} due {-|DATE}",
+		"{Create|Set|Add} a new {-|PRIORITY} priority task {-|NAME} due on {-|DATE}",
+		"{Create|Set|Add} a new {-|PRIORITY} priority task {-|NAME} required by {-|DATE}",
 		"{Create|Set|Add} a new {-|PRIORITY} priority task {-|NAME}"
 	]
 }, function(req, res) {
