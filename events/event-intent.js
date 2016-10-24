@@ -22,7 +22,7 @@ function EventIntent() {
 	function mapCreateResponse(response) {
 		
 		var event = mapEvent(response);
-		return new IntentResponse(ObjectType.EVENTS, [event]);
+		return new IntentResponse(ObjectType.EVENTS, [event], false, true);
 	}
 
 	function mapResponse(response) {

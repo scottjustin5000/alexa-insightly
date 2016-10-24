@@ -24,7 +24,7 @@ Task.prototype.format = function() {
 	var response = this.TITLE;
 
 	if(this.DUE_DATE) {
-		response +='<break time="500ms"/> beginning '+ moment(this.DUE_DATE).format('MMMM Do YYYY');
+		response +='<break time="500ms"/> due '+ moment(this.DUE_DATE).format('MMMM Do YYYY');
 	}
 	if(this.PRIORITY &&  _.findKey(PriorityTypes, this.PRIORITY)) {
 		response +='<break time="500ms"/> with a  '+ _.findKey(PriorityTypes, this.PRIORITY) +' priority';

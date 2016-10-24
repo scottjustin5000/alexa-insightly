@@ -8,7 +8,7 @@ describe('Test Leads Intent', function() {
 		
 		var lead = new Lead('scott', 'justin', '5000', '4155555555', 'some-one@fake.com');
 		lead.DATE_CREATED = new Date();
-		var formatted = lead.DATE_CREATED.toLocaleDateString('en-US')
+		var formatted = moment(lead.DATE_CREATED).format('MMMM Do YYYY');
 		var val = lead.format();
 		val.should.equal('scott justin<break time="500ms"/> from 5000<break time="500ms"/> phone number 4 1 5 5 5 5 5 5 5 5<break time="500ms"/> with email address some dash one at fake dot com<break time="500ms"/> created on '+formatted);
 		done();

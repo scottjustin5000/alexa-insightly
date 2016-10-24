@@ -31,7 +31,7 @@ function ContactIntent() {
 		var dataResults = _.map(responseData, function(c) {
 			return mapContact(c);
 		});
-		return new IntentResponse(ObjectType.CONTACTS, dataResults);
+		return new IntentResponse(ObjectType.CONTACTS, dataResults, false, true);
 	}
 
 	function createContactInfo(info, type) {

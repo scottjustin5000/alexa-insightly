@@ -149,10 +149,11 @@ app.intent('create_lead_intent', {
 
 	var firstName = req.slot('FIRST_NAME');
 	var lastName = req.slot('LAST_NAME');
-	var number = req.slot('PHONE_NUMBER');
+	var company = req.slot('COMPANY_NAME');
 	var email = req.slot('EMAIL');
 	var phoneNumber = req.slot('PHONE_NUMBER');
-
+	
+	var intent = new LeadsIntent();
 	intent.create(firstName, lastName, company, phoneNumber, email).then(function(response) {
 		res.say(response.format()).send();
 	});
@@ -211,7 +212,6 @@ app.intent('create_task_intent', {
 	var priority = req.slot('PRIORITY');
 
 	var intent = new TaskIntent();
-
 	intent.create(name, dueDate, priority).then(function(response) {
 		res.say(response.format()).send();
 	});
@@ -272,7 +272,7 @@ app.intent('create_event_intent', {
 		"{Create|Set} a new meeting titled {-|TITLE} for {-|DATE} at {-|TIME}",
 		"{Create|Set} a new meeting {for|with} {-|TITLE} for {-|DATE} at {-|TIME}",
 		"{Create|Set} a meeting titled {-|TITLE} for {-|DATE} at {-|TIME}",
-		"{Create|Set} a meeting {for|with}  {-|TITLE} for {-|DATE} at {-|TIME}",
+		"{Create|Set} a meeting {for|with} {-|TITLE} for {-|DATE} at {-|TIME}",
 		"{Create|Set} a meeting titled {-|TITLE} for {-|DATE} at {-|TIME}",
 		"{Create|Set} a meeting {for|with}  {-|TITLE} for {-|DATE} at {-|TIME}",
 		"{Create|Set} a new calendar event {for|with} {-|FIRST_NAME} {-|LAST_NAME} for {-|DATE} at {-|TIME}",
@@ -290,7 +290,6 @@ app.intent('create_event_intent', {
 	var time = req.slots('TIME');
 
 	var intent = new EventIntent();
-
 	intent.create(title, firstName, lastName, date, time).then(function(response) {
 		res.say(response.format()).send();
 	});
@@ -316,9 +315,8 @@ app.intent('list_opportunity_intent', {
 	var timeframe = req.slot('TIMEFRAME');
 	var oppName = req.slot('OPPORTUNITY_NAME');
 
-	var opportunityIntent = new OpportunityIntent();
-
-	opportunityIntent.get(timeframe, oppName).then(function(response) {
+	var intent = new OpportunityIntent();
+	intent.get(timeframe, oppName).then(function(response) {
 		res.say(response.format()).send();
 	});
 	return false;
@@ -342,9 +340,8 @@ app.intent('create_opportunity_intent', {
 	var timeframe = req.slot('DETAILS');
 	var oppName = req.slot('OPPORTUNITY_NAME');
 
-	var opportunityIntent = new OpportunityIntent();
-
-	opportunityIntent.create(oppName, details).then(function(response) {
+	var intent = new OpportunityIntent();
+	intent.create(oppName, details).then(function(response) {
 		res.say(response.format()).send();
 	});
 	return false;
@@ -370,8 +367,8 @@ app.intent('list_project_intent', {
 	var timeframe = req.slot('TIMEFRAME');
 	var projectName = req.slot('PROJECT_NAME');
 
-	var projectIntent = new ProjectIntent();
-	projectIntent.get(timeframe, projectName).then(function(response) {
+	var intent = new ProjectIntent();
+	intent.get(timeframe, projectName).then(function(response) {
 		res.say(response.format()).send();
 	});
 	return false;
@@ -395,8 +392,8 @@ app.intent('create_project_intent', {
 	var details = req.slot('DETAILS');
 	var projectName = req.slot('PROJECT_NAME');
 
-	var projectIntent = new ProjectIntent();
-	projectIntent.get(projectName, details).then(function(response) {
+	var intent = new ProjectIntent();
+	intent.get(projectName, details).then(function(response) {
 		res.say(response.format()).send();
 	});
 	return false;
@@ -422,7 +419,6 @@ app.intent('search_contact_intent', {
 	var lastName = req.slot('LAST_NAME');
 
 	var intent = new ContactIntent();
-
 	intent.get(firstName, lastName).then(function(response) {
 		res.say(response.format()).send();
 	});
@@ -459,7 +455,6 @@ app.intent('create_contact_intent', {
 	var email = req.slot('EMAIL');
 	
 	var intent = new ContactIntent();
-
 	intent.create(firstName, lastName, phone, email).then(function(response) {
 		res.say(response.format()).send();
 	});
@@ -482,7 +477,6 @@ app.intent('search_organization_intent', {
 	var name = req.slot('ORGANIZATION_NAME');
 
 	var intent = new OrganizationIntent();
-
 	intent.get(name).then(function(response) {
 		res.say(response.format()).send();
 	});
@@ -519,7 +513,6 @@ app.intent('create_organization_intent', {
 	var email = req.slot('EMAIL');
 	
 	var intent = new OrganizationIntent();
-
 	intent.create(name, phone, email).then(function(response) {
 		res.say(response.format()).send();
 	});

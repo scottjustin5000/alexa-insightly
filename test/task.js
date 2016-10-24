@@ -48,8 +48,8 @@ describe('Tasks intent integration test', function() {
 	});
 
 	it('should create new Task', function(done) {
-
-		return intent.create('my task', new Date(), 1, 'Not Started', 0)
+		
+		return intent.create('my task', moment(new Date()).format('YYYY-MM-DD'), 1, 'Not Started', 0)
 		.then(function(res) {
 			res.should.be.an.instanceOf(Object);
 			res.should.have.property('type', 'Tasks');

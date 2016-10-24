@@ -18,7 +18,7 @@ function ProjectIntent() {
 	function mapCreateResponse(response) {
 		
 		var project = mapProject(response);
-		return new IntentResponse(ObjectType.PROJECTS, [project]);
+		return new IntentResponse(ObjectType.PROJECTS, [project], false, true);
 	}
 
 	function mapResponse(response) {

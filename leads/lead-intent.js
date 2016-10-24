@@ -26,7 +26,7 @@ function LeadsIntent() {
 	function mapCreateResponse(response) {
 		
 		var lead = mapLead(response);
-		return new IntentResponse(ObjectType.LEADS, [lead]);
+		return new IntentResponse(ObjectType.LEADS, [lead], false, true);
 	}
 
 	function mapResponse(response) {

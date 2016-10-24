@@ -18,7 +18,7 @@ function TaskIntent() {
 
 	function mapCreateResponse(response) {
 		var task = mapTask(response);
-		return new IntentResponse(ObjectType.TASKS, [task]);
+		return new IntentResponse(ObjectType.TASKS, [task], false, true);
 	}
 
 	function mapResponse(response) {
@@ -30,7 +30,7 @@ function TaskIntent() {
 	}
 
 	self.create = function(name, dueDate, priority) {
-		var task = new Task(name, dueDate, PriorityType.parse(priority));
+		var task = new Task(name, new Date(dueDate), PriorityType.parse(priority));
 		return api.post(ObjectType.TASKS, task)
 			.then(mapCreateResponse)
 			.catch(this.handleError);

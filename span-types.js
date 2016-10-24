@@ -7,13 +7,13 @@ module.exports = {
 	YEAR: 'year',
 	UNKNOWN : 'unknown',
 	parse : function(val) {
-		if(_.includes(val), 'day') {
+		if(_.includes(val,'day')) {
 			return 'day';
-		} else if(_.includes(val), 'week'){
+		} else if(_.includes(val,'week')){
 			return 'week';
-		} else if(_.includes(val), 'month'){
+		} else if(_.includes(val, 'month')){
 			return 'month';
-		} else if(_.includes(val), 'year'){
+		} else if(_.includes(val, 'year')){
 			return 'year';
 		} else{
 			return 'unknown';

@@ -1,5 +1,6 @@
 var EmailAddress = require('../email-address');
 var PhoneNumber  = require('../phone-number');
+var moment = require('moment')
 
 function Lead(firstName, lastName, company, phoneNumber, email, id) {
 	
@@ -34,7 +35,7 @@ Lead.prototype.format = function(){
 	    response += ('<break time="500ms"/> with email address ' + address.convertToSpeech());
 	}
 	if(this.DATE_CREATED) {
-		response += '<break time="500ms"/> created on ' + this.DATE_CREATED.toLocaleDateString('en-US');
+		response += '<break time="500ms"/> created on ' + moment(this.DATE_CREATED).format('MMMM Do YYYY')
 	}
 	return response;
 };

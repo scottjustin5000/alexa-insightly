@@ -31,7 +31,7 @@ function OrganizationIntent() {
 		var dataResults = _.map(responseData, function(o) {
 			return mapOrganization(o);
 		});
-		return new IntentResponse(ObjectType.ORGANIZATIONS, dataResults);
+		return new IntentResponse(ObjectType.ORGANIZATIONS, dataResults, false, true);
 	}
 
 	function createContactInfo(info, type) {
